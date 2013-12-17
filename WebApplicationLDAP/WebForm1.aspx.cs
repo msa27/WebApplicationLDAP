@@ -13,6 +13,8 @@ namespace WebApplicationLDAP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            LDAPManager LDAPM = new LDAPManager();
+            bool a = LDAPM.Autenticar("misalazar", "{SHA}fEqNCco3Yq9h5ZUglD3CZJT4lBs=", "AdminConsejo");
 
             //string ldap = "LDAP://192.168.1.250/ou=people,dc=ic-itcr,dc=ac,dc=cr";
             //string pwd = "123456";          
