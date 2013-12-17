@@ -38,8 +38,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LinqToLdap">
+      <HintPath>..\packages\LinqToLdap.3.3\lib\net45\LinqToLdap.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToLdap.Contrib">
+      <HintPath>..\packages\LinqToLdap.3.3\lib\net45\LinqToLdap.Contrib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -72,6 +80,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

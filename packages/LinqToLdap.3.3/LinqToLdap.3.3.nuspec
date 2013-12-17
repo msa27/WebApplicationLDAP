@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>LinqToLdap</id>
+    <version>3.3</version>
+    <title>LINQ to LDAP</title>
+    <authors>Alan Hatter</authors>
+    <owners>Alan Hatter</owners>
+    <licenseUrl>http://linqtoldap.codeplex.com/license</licenseUrl>
+    <projectUrl>http://linqtoldap.codeplex.com/</projectUrl>
+    <iconUrl>http://3.bp.blogspot.com/-tQ7UObq7UQw/Ultls-7CI7I/AAAAAAAAAnM/5OEMj40RXbw/s200/linqtoldap_logo_small.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>LINQ provider built on top of System.DirectoryServices.Protocols for querying and updating LDAP servers.</description>
+    <summary>LINQ provider built on top of System.DirectoryServices.Protocols for querying and updating LDAP servers.</summary>
+    <releaseNotes>New Features
+          * Post event listeners have been added for add, update, and delete operations.
+          * It's now possible to enable / disable tracing from the ILinqToLdapLogger interface.
+          * The pooled connection factory can now be reinitialized via the IPooledConnectionFactory interface.
+          * Support for dynamic OrderBy / ThenBy (and descending) in queries.
+          * Support for ThenBy / ThenByDescinding in queries.
+          * Support for multiple OrderBy statements matching the behavior outlined here: http://tools.ietf.org/html/rfc2891.  Previously only one OrderBy could be applied.
+
+Bug Fixes
+          * It's now possible to use properties and methods other than the "Get" variants in lambda Selects against IDirectoryAttributes.
+          * ListAttributes now works with all supported IQueryable extension methods.
+          * Dispose now implemented correctly for DirectroyContext to prevent exceptions from LdapConnection's finalizer.
+          * ! was not being cleaned according to RFC4515.
+
+Changes
+          * CN and OU changes no longer throw an ArgumentException when using DirectoryAttributes.
+          * SimpleTextLogger will no longer throw an exception for GCed TextWriters.
+
+Breaking Changes
+          * shouldCleanValue flag added to all Filter class methods.  If true this option will apply the CleanFilterValue method to the value.</releaseNotes>
+    <copyright />
+    <language>en-US</language>
+    <tags>LINQ LDAP AD active directory openldap tivoli</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="" />
+      <frameworkAssembly assemblyName="System.DirectoryServices.Protocols" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
